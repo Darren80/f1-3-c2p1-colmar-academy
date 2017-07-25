@@ -1,0 +1,637 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v10/zhcz-_WihjSQC0oHJ9TCYPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v10/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+html {
+  font-size: 16px;
+  color: rgba(0,0,0,0.87); /*Material Design Black*/
+  font-family: 'Monserrat', sans-serif;
+}
+
+@media only screen and (min-width: 2000px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 2000px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+
+.center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/*Navigation Bar*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+
+  height: 4rem;
+  padding: 0 1.5rem;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 4px grey;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+header .home-logo {
+  display: flex;
+  align-items: center;
+}
+
+header .home-logo img {
+  height: 3rem;
+}
+
+header .home-logo h1 {
+  font-size: 2rem;
+  font-family: 'Monserrat', sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+header .home-logo h1 span.bold {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+header .nav-links {
+  display: flex;
+
+  font-family: 'Monserrat', sans-serif;
+  font-size: 1.25rem;
+}
+
+header .nav-links ul {
+  display: flex;
+  align-items: center;
+}
+
+header .nav-links li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header .nav-links ul li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.nav-icons {
+  display: none;
+}
+
+@media only screen and (min-width: 575px) and (max-width: 800px) {
+  header {
+    padding: 0 1rem;
+  }
+  header .home-logo h1 {
+    font-size: 1.5rem;
+  }
+
+  header .nav-links {
+    font-size: 1rem;
+  }
+  header .nav-links ul li:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}
+
+
+
+@media only screen and (max-width: 575px) {
+  header {
+    height: 64px;
+    padding: 0;
+  }
+
+  header .home-logo {
+    display: none;
+  }
+
+  header .nav-links {
+    display: none;
+  }
+
+  .nav-icons {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nav-icons img {
+    height: 3rem;
+  }
+}
+
+/*Banner*/
+
+.banner {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2rem 1.5rem;
+}
+
+.banner .banner-image {
+  width: 60%;
+  margin-right: 2rem;
+  flex-shrink: 0;
+}
+
+.banner .banner-image img {
+  width: 100%;
+}
+
+.banner .banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  font-family: 'Raleway', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+
+  overflow: hidden;
+  flex-shrink: 1;
+}
+
+.banner .banner-text h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.25;
+
+  margin-bottom: 1.5rem;
+}
+
+.banner .banner-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.6;
+
+  margin-bottom: 2rem;
+}
+
+.banner .banner-text .btn-box .button {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.banner-text h3.button {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+}
+
+.btn-box {
+  width: 100%;
+}
+
+.banner-text .btn-box .button:hover {
+  background-color: rgba(0,0,0, 0.6);
+  transition: background-color 0.15s ease;
+}
+
+.banner-text .btn-box .button:active {
+  -webkit-box-shadow: 4px 4px 10px 1px rgba(112,112,112,0.8);
+  -moz-box-shadow: 4px 4px 10px 1px rgba(112,112,112,0.8);
+  box-shadow: 4px 4px 10px 1px rgba(112,112,112,0.8);
+}
+
+@media only screen and (min-width: 2000px) {
+  .banner .banner-text h1 {
+    font-size: 3rem;
+  }
+  .banner .banner-text h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .banner .banner-text h1 {
+    font-size: 3.5vw;
+  }
+  .banner .banner-text h2 {
+    font-size: 2.5vw;
+  }
+  .banner .banner-text h3.button {
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .banner {
+    flex-direction: column;
+    padding: 0;
+  }
+  .banner .banner-image {
+    width: 100%;
+    margin: 0;
+  }
+  .banner .banner-image img {
+    height: 180px;
+    object-fit: cover;
+    object-position:top;
+    align-self: center;
+  }
+
+  .banner .banner-text h1 {
+    margin-top: 2.66rem;
+    margin-bottom: 2.66rem;
+    font-size: 2.5rem;
+  }
+
+  .banner .banner-text h2 {
+    font-size: 1.25rem;
+  }
+
+  .banner .banner-text h3.button {
+    font-size: 1rem;
+    margin-bottom: 2.66rem;
+  }
+}
+
+/*Information Bar*/
+
+.information {
+  display: flex;
+}
+
+.information .info-main {
+  width: 56%;
+  border-right: 1px solid hsla(0, 0%, 50%, 0.6);
+  padding: 2rem 2%;
+  font-family: 'Raleway', sans-serif;
+}
+
+.information .info-main img {
+  width: 100%;
+}
+
+.information .info-main h1 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.information .info-main h2 {
+  font-size: 1.1rem;
+  line-height: 1.3;
+
+  margin-bottom: 3rem;
+}
+
+.information .info-main h3 {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.information .info-sidebar {
+  padding: 2rem 0;
+  width: 40%;
+}
+
+/*Reused Code*/
+
+.sidebar-block {
+  display: flex;
+  align-items: center;
+
+  padding: 1rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.sidebar-block img {
+  max-width: 35%;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.sidebar-block h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.sidebar-block h2 {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.sidebar-block h3 a {
+  text-decoration: none;
+  color: #00a1ff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.thesis-right .sidebar-block h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0rem;
+}
+
+/*End of reused Code*/
+
+.info-sidebar .sidebar-block:last-child {
+  background-color: rgba(0,0,0,0.2);
+}
+
+@media only screen and (max-width: 575px) {
+  .information {
+    border-bottom: 1px solid hsla(0, 0%, 50%, 0.6);
+  }
+
+  .information .info-main {
+    display: none;
+  }
+  .information .info-sidebar {
+    width: auto;
+  }
+  .info-sidebar .sidebar-block {
+    display: block;
+  }
+  .info-sidebar .sidebar-block img {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .info-sidebar .sidebar-block h1 {
+    font-size: 2rem;
+  }
+
+  .info-sidebar .sidebar-block h2 {
+    font-size: 1.5rem;
+  }
+
+  .info-sidebar .sidebar-block h3 a {
+    font-size: 1.5rem;
+  }
+}
+
+/*Avaliable Courses*/
+
+.courses {
+  padding: 2rem 0;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.courses h1.title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.courses .course-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.courses .course-row .course-block {
+  background-color: white;
+  width: 30%;
+  min-width: 160px;
+}
+
+.course-block img {
+  width: 100%;
+}
+
+.course-block .text {
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.course-block h2, .course-block h3,.course-block p {
+  font-family: 'Raleway', sans-serif;
+}
+
+.course-block h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.course-block h3 {
+  margin: 1rem 0;
+}
+
+.course-block p {
+  line-height: 1.4;
+}
+
+.course-row .course-block:not(:nth-child(3n)) {
+  margin-right: 5%;
+}
+
+.course-row .course-block:not(:nth-child(1n+4)) {
+  margin-bottom: 1.25rem;
+}
+
+@media only screen and (min-width: 2000px) {
+  .courses .course-row {
+    max-width: 1300px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .courses .course-row .course-block {
+    width: 25%;
+  }
+  .courses .course-row {
+    flex-wrap: wrap;
+  }
+
+  .course-block p {
+    font-size: 0.95rem;
+  }
+
+}
+
+@media only screen and (max-width:575px) {
+  .courses {
+    padding: 2rem 1rem;
+    background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  .courses .mobile h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.15);
+    margin-bottom: 1rem;
+  }
+}
+
+/*Thesis*/
+
+.thesis {
+  padding: 2%;
+  font-family: 'Raleway', sans-serif;
+}
+
+.thesis h1#thesis-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.thesis .thesis-columns {
+  display: flex;
+}
+
+.thesis video {
+  margin-bottom: 1.5rem;
+}
+
+.thesis-left {
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 56%;
+
+  margin-right: 2%;
+}
+
+.thesis-right {
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 38%;
+}
+
+.thesis-right .sidebar-block:first-child {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.thesis-left h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  margin: 1rem 0;
+}
+
+.thesis-left h2 {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.75);
+  line-height: 1.4;
+}
+
+@media only screen and (max-width: 800px) {
+  .thesis-right .sidebar-block h2 {
+    margin-top: 0;
+  }
+  .sidebar-block img {
+    max-width: 45%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .thesis .thesis-columns .thesis-right {
+    display: none;
+  }
+  .thesis .thesis-columns .thesis-left h1, .thesis .thesis-columns .thesis-left h2 {
+    display: none;
+  }
+}
+
+/*Footer*/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1rem 1.5rem 4rem 1.5rem;
+  border-top: 1px solid grey;
+}
+
+footer .terms {
+  display: flex;
+}
+
+footer .terms a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer .terms p:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 575px) {
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
